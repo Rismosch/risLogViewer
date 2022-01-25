@@ -45,7 +45,7 @@ namespace LogViewer.Properties
                 if ((resourceMan == null))
                 {
                     global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("LogViewer.Properties.Resources",
+                        new global::System.Resources.ResourceManager("risLogViewer.Properties.Resources",
                             typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
