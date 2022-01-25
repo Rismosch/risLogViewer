@@ -1,2 +1,2 @@
 # risLogViewer
-very simple, paginated text reader
+very very, VERY simple, paginated text reader
