@@ -50,7 +50,7 @@ namespace LogViewer
             }
         }
 
-        private bool m_TextWrappingCheckBox = true;
+        private bool m_TextWrappingCheckBox = false;
         public bool TextWrappingCheckBox
         {
             get => m_TextWrappingCheckBox;
