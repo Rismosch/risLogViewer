@@ -1,0 +1,64 @@
+﻿<Window x:Class="LogViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogViewer"
+        mc:Ignorable="d"
+        Title="risLogViewer" Height="350" Width="525" WindowState="Maximized">
+    <DockPanel Name="myDockPanel">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Name="button_open"
+                    BorderBrush="Black" BorderThickness="1"
+                    Width="100"
+                    Click="OnClickOpen" ClickMode="Release">
+                Open...
+            </Button>
+            <Button Name="button_reload"
+                    BorderBrush="Black" BorderThickness="1"
+                    Width="100"
+                    Click="OnClickReload" ClickMode="Release">
+                Reload
+            </Button>
+            
+            <Label>PageSize</Label>
+            <TextBox Text="{Binding PageSize}" Width="100" TextAlignment="Right" PreviewTextInput="UIElement_OnPreviewPageInput"/>
+
+            <Label>PageNumber</Label>
+            <TextBox Text="{Binding PageNumber}" Width="100" TextAlignment="Right" PreviewTextInput="UIElement_OnPreviewPageInput"/>
+            <Button Name="button_page_previous"
+                    BorderBrush="Black" BorderThickness="1"
+                    Click="OnClickPageDown" ClickMode="Release"
+                    Width="20">
+                ⮜
+            </Button>
+            <Button Name="button_page_next"
+                    BorderBrush="Black" BorderThickness="1"
+                    Click="OnClickPageUp" ClickMode="Release"
+                    Width="20">
+                ⮞
+            </Button>
+            <CheckBox Margin="7" IsChecked="{Binding TextWrappingCheckBox}">TextWrap</CheckBox>
+        </StackPanel>
+        
+        <!-- <Label DockPanel.Dock="Bottom" Height="25">footer</Label> -->
+        
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="{Binding HorizontalScroll}" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <TextBox Text="{Binding TextContent}" DockPanel.Dock="Bottom" AcceptsReturn="True" TextWrapping="{Binding TextWrapping}"/>   
+        </ScrollViewer>
+        
+    </DockPanel>
+    <!-- <StackPanel Orientation="Vertical" Margin="5"> -->
+    <!--     <StackPanel Orientation="Horizontal"> -->
+    <!--         <Button Name="button_open" -->
+    <!--                 BorderBrush="Black" BorderThickness="1" -->
+    <!--                 Click="OnClickOpen" ClickMode="Release"> -->
+    <!--             Open... -->
+    <!--         </Button> -->
+    <!--         <TextBox></TextBox> -->
+    <!--     </StackPanel> -->
+    <!--      -->
+    <!--     <TextBox Height="Auto" VerticalAlignment="Stretch"></TextBox> -->
+    <!--     <Label Height="25">footer</Label> -->
+    <!-- </StackPanel> -->
+</Window>
